@@ -37,8 +37,9 @@
   <link rel="apple-touch-icon" href="/assets/icon-180.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!-- Preconnect for the app link -->
-  <link rel="dns-prefetch" href="https://spotiart.pl">
+  <!-- Preconnect for the app subdomain (CTA target) -->
+  <link rel="dns-prefetch" href="https://app.spotiart.pl">
+  <link rel="preconnect" href="https://app.spotiart.pl" crossorigin>
 
   <!-- Structured data: Organization + Software + FAQ -->
   <script type="application/ld+json">
@@ -69,7 +70,8 @@
         "applicationCategory": "MultimediaApplication",
         "applicationSubCategory": "Music Player",
         "operatingSystem": "Web (dowolna nowoczesna przeglądarka)",
-        "url": "https://spotiart.pl/",
+        "url": "https://app.spotiart.pl/",
+        "installUrl": "https://app.spotiart.pl/",
         "inLanguage": "pl-PL",
         "description": "Przeglądarkowe studio muzyczne z biblioteką utworów, 13-pasmowym equalizerem, wizualizatorem audio, DJ Studio i Link Lobby. Pliki, playlisty i ustawienia pozostają lokalnie w przeglądarce.",
         "featureList": [
@@ -214,6 +216,37 @@
     .pill-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:44px}
     .pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;color:var(--muted);background:rgba(255,255,255,.02)}
     .pill svg{color:var(--green)}
+    .hero-bg{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.16;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000,transparent 78%);mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000,transparent 78%)}
+    .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,10,.4),var(--bg))}
+
+    /* Comparison table */
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}
+    table.cmp{width:100%;border-collapse:collapse;min-width:560px}
+    table.cmp th,table.cmp td{padding:16px 20px;text-align:left;border-bottom:1px solid var(--line);font-size:.98rem}
+    table.cmp thead th{font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted-2)}
+    table.cmp thead th:last-child{color:var(--green-bright)}
+    table.cmp td:first-child{color:var(--muted);font-weight:600}
+    table.cmp td:last-child{color:var(--text);font-weight:600}
+    table.cmp tbody tr:last-child td{border-bottom:0}
+    table.cmp .col-spoti{background:rgba(30,215,96,.06)}
+
+    /* Audio player */
+    .audio-card{max-width:760px;margin:0 auto;border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:linear-gradient(160deg,var(--panel-2),var(--bg));display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+    .audio-card .disc{width:86px;height:86px;border-radius:50%;flex:0 0 auto;background:conic-gradient(from 0deg,rgba(30,215,96,.4),transparent 45%,rgba(30,215,96,.4));display:grid;place-items:center}
+    .audio-card .disc::after{content:"";width:26px;height:26px;border-radius:50%;background:var(--panel);border:2px solid var(--green)}
+    .audio-card .meta{flex:1;min-width:220px}
+    .audio-card audio{width:100%;margin-top:12px}
+    .audio-card h3{font-size:1.15rem;margin-bottom:4px}
+    .audio-card p{color:var(--muted);font-size:.92rem;margin:0}
+
+    /* Downloads */
+    .dl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:820px;margin:0 auto}
+    .dl{display:flex;gap:16px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--panel);transition:.2s border-color,.2s transform}
+    .dl:hover{border-color:rgba(30,215,96,.4);transform:translateY(-3px)}
+    .dl .ico{width:46px;height:46px;flex:0 0 auto;border-radius:12px;display:grid;place-items:center;background:rgba(30,215,96,.1);color:var(--green-bright);border:1px solid var(--line)}
+    .dl b{display:block;font-size:1rem}
+    .dl span{color:var(--muted);font-size:.85rem}
 
     /* Section base */
     section{padding:84px 0;position:relative}
@@ -314,10 +347,12 @@
       .menu-btn{display:block}
       .nav-links.open{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--bg-2);padding:20px 24px;border-bottom:1px solid var(--line);gap:18px}
     }
+    @media(max-width:700px){ .dl-grid{grid-template-columns:1fr} }
     @media(max-width:560px){
       .grid,.aud,.stats{grid-template-columns:1fr}
       section{padding:60px 0}
       .hero{padding:64px 0 56px}
+      .audio-card{flex-direction:column;text-align:center}
     }
     /* Skip link */
     .skip{position:absolute;left:-9999px;top:0;background:var(--green);color:#04140a;padding:10px 16px;border-radius:8px;z-index:100}
@@ -344,7 +379,7 @@
         <a href="#dj">DJ Studio</a>
         <a href="#prywatnosc">Prywatność</a>
         <a href="#faq">FAQ</a>
-        <a href="https://spotiart.pl/" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Otwórz aplikację</a>
+        <a href="https://app.spotiart.pl/" class="btn btn-primary nav-cta" rel="noopener">Otwórz aplikację</a>
       </nav>
       <button class="menu-btn" id="menuBtn" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
@@ -355,12 +390,15 @@
   <main id="glowna">
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="/assets/hero-console.jpg" alt="" width="1600" height="900" loading="eager" fetchpriority="high">
+      </div>
       <div class="wrap">
         <span class="eyebrow">Prywatne przeglądarkowe studio muzyczne</span>
         <h1 id="hero-title">Twoja muzyka.<br><span class="grad">Twoje brzmienie. Twoje studio.</span></h1>
         <p class="lead">SpotiArt Studio to osobista przestrzeń muzyczna, która łączy bibliotekę utworów, zaawansowaną regulację brzmienia, wizualizacje i konsoletę DJ-ską — a Twoje pliki zostają lokalnie w przeglądarce.</p>
         <div class="hero-cta">
-          <a href="https://spotiart.pl/" class="btn btn-primary" target="_blank" rel="noopener">
+          <a href="https://app.spotiart.pl/" class="btn btn-primary" rel="noopener">
             Otwórz SpotiArt
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -417,6 +455,28 @@
             <h3>Prywatność i konto</h3>
             <p>Pliki i playlisty zostają na urządzeniu. Opcjonalne konto synchronizuje linki, awatar i kopie profili EQ.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUDIO OVERVIEW -->
+    <section id="posluchaj" aria-labelledby="audio-title" style="padding-top:20px">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Posłuchaj</span>
+          <h2 id="audio-title">Poznaj SpotiArt w niecałe kilka minut</h2>
+          <p>Wolisz słuchać niż czytać? Włącz audio-przewodnik, który rzetelnie i kompleksowo opisuje projekt SpotiArt Studio.</p>
+        </div>
+        <div class="audio-card">
+          <div class="disc" aria-hidden="true"></div>
+          <div class="meta">
+            <h3>SpotiArt Studio — audio-przewodnik</h3>
+            <p>Twoje profesjonalne studio muzyczne w przeglądarce.</p>
+            <audio controls preload="none" src="/assets/audio/spotiart-opis.mp3">
+              Twoja przeglądarka nie obsługuje odtwarzacza audio.
+              <a href="/assets/audio/spotiart-opis.mp3">Pobierz nagranie</a>.
+            </audio>
+          </div>
         </div>
       </div>
     </section>
@@ -555,6 +615,31 @@
       </div>
     </section>
 
+    <!-- COMPARISON -->
+    <section id="porownanie" class="band" aria-labelledby="cmp-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Ewolucja doświadczenia muzycznego</span>
+          <h2 id="cmp-title">Standardowy streaming a SpotiArt Studio</h2>
+          <p>Zamiast pasywnego odtwarzania z chmury — aktywne, prywatne studio, które działa na Twoich zasadach.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="cmp">
+            <thead>
+              <tr><th scope="col">Obszar</th><th scope="col">Standardowy streaming</th><th scope="col">SpotiArt Studio</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Model danych</td><td>Chmura (zależność)</td><td class="col-spoti">Local Storage — pełna prywatność</td></tr>
+              <tr><td>Dźwięk</td><td>Standardowe pre-sety</td><td class="col-spoti">13-pasmowy EQ z importem/eksportem</td></tr>
+              <tr><td>Słuchanie</td><td>Pasywne odtwarzanie</td><td class="col-spoti">Aktywny DJ-ing i miksowanie</td></tr>
+              <tr><td>Integracja wideo</td><td>Zewnętrzne aplikacje</td><td class="col-spoti">Wbudowane Link Lobby dla YouTube</td></tr>
+              <tr><td>Konto</td><td>Wymagane do działania</td><td class="col-spoti">Opcjonalne — tryb gościa to 100% lokalności</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section id="faq" aria-labelledby="faq-title">
       <div class="wrap">
@@ -592,6 +677,27 @@
       </div>
     </section>
 
+    <!-- DOWNLOADS -->
+    <section id="pobierz" aria-labelledby="dl-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Do pobrania</span>
+          <h2 id="dl-title">Materiały o SpotiArt Studio</h2>
+          <p>Pełna prezentacja projektu w formacie PDF — do przeglądania offline i udostępniania.</p>
+        </div>
+        <div class="dl-grid">
+          <a class="dl" href="/assets/docs/SpotiArt-Private-Studio.pdf" download>
+            <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14 3v5h5" stroke-linejoin="round"/><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" stroke-linejoin="round"/><path d="M12 12v5M9.5 14.5 12 17l2.5-2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span><b>SpotiArt — Prywatne Studio</b><span>Prezentacja funkcji i filozofii · PDF</span></span>
+          </a>
+          <a class="dl" href="/assets/docs/SpotiArt-Studio-Prezentacja.pdf" download>
+            <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14 3v5h5" stroke-linejoin="round"/><path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" stroke-linejoin="round"/><path d="M12 12v5M9.5 14.5 12 17l2.5-2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span><b>SpotiArt Studio — Prezentacja</b><span>Przegląd całego projektu · PDF</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- FINAL CTA -->
     <section class="final" aria-labelledby="cta-title">
       <div class="wrap">
@@ -599,7 +705,7 @@
           <div class="glow" aria-hidden="true"></div>
           <h2 id="cta-title">Wejdź, dodaj muzykę, <span class="grad">stwórz swoje studio</span></h2>
           <p>Ustaw brzmienie, zbuduj playlisty i miksuj dokładnie tak, jak lubisz. SpotiArt.pl — Twoja muzyka. Twoje brzmienie. Twoje studio.</p>
-          <a href="https://spotiart.pl/" class="btn btn-primary" target="_blank" rel="noopener" style="position:relative">
+          <a href="https://app.spotiart.pl/" class="btn btn-primary" rel="noopener" style="position:relative">
             Otwórz SpotiArt Studio
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -633,13 +739,13 @@
           <div class="foot-col">
             <h4>Zasoby</h4>
             <a href="#faq">FAQ</a>
-            <a href="https://spotiart.pl/" target="_blank" rel="noopener">Aplikacja</a>
-            <a href="https://spotiart.pl/links" target="_blank" rel="noopener">Link Lobby</a>
+            <a href="#pobierz">Do pobrania</a>
+            <a href="https://app.spotiart.pl/links" rel="noopener">Link Lobby</a>
           </div>
           <div class="foot-col">
             <h4>Start</h4>
-            <a href="https://spotiart.pl/" target="_blank" rel="noopener">Otwórz studio</a>
-            <a href="https://spotiart.pl/auth" target="_blank" rel="noopener">Załóż konto</a>
+            <a href="https://app.spotiart.pl/" rel="noopener">Otwórz studio</a>
+            <a href="https://app.spotiart.pl/auth" rel="noopener">Załóż konto</a>
           </div>
         </div>
       </div>

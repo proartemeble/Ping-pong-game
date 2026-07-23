@@ -21,11 +21,12 @@ Hasło marki: „Twoja muzyka. Twoje brzmienie. Twoje studio.” (Private. Local
 
 ## Strony
 
-- [Strona główna](https://spotiart.pl/): aplikacja i wszystkie funkcje.
-- [Equalizer](https://spotiart.pl/equalizer): 13-pasmowy korektor brzmienia.
-- [Link Lobby](https://spotiart.pl/links): kolekcje linków YouTube.
-- [DJ Studio](https://spotiart.pl/dj): miksowanie na dwóch deckach.
-- [Logowanie / rejestracja](https://spotiart.pl/auth): opcjonalne konto.
+- [Landing / strona główna](https://spotiart.pl/): opis produktu i wszystkich funkcji.
+- [Aplikacja SpotiArt Studio](https://app.spotiart.pl/): pełny dashboard aplikacji (uruchamiany z przycisków CTA).
+- [Equalizer](https://app.spotiart.pl/equalizer): 13-pasmowy korektor brzmienia.
+- [Link Lobby](https://app.spotiart.pl/links): kolekcje linków YouTube.
+- [DJ Studio](https://app.spotiart.pl/dj): miksowanie na dwóch deckach.
+- [Logowanie / rejestracja](https://app.spotiart.pl/auth): opcjonalne konto.
 
 ## FAQ
 
