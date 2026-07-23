@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pl" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#05080a">
+
+  <!-- Primary SEO meta -->
+  <title>SpotiArt Studio — Twoja muzyka. Twoje brzmienie. Twoje studio.</title>
+  <meta name="description" content="SpotiArt Studio to prywatne, przeglądarkowe centrum muzyczne: biblioteka utworów, 13-pasmowy equalizer, wizualizator audio, DJ Studio i Link Lobby. Twoje pliki zostają lokalnie w przeglądarce — pełna prywatność i kontrola.">
+  <meta name="keywords" content="SpotiArt, SpotiArt Studio, odtwarzacz muzyki w przeglądarce, prywatny odtwarzacz, 13-pasmowy equalizer, DJ Studio online, wizualizator audio, playlisty lokalne, Link Lobby, muzyka bez rejestracji, spotiart.pl">
+  <meta name="author" content="SpotiArt Studio">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="language" content="Polish">
+  <link rel="canonical" href="https://spotiart.pl/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SpotiArt Studio">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="SpotiArt Studio — Twoja muzyka. Twoje brzmienie. Twoje studio.">
+  <meta property="og:description" content="Prywatne, przeglądarkowe centrum muzyczne: biblioteka, 13-pasmowy equalizer, wizualizator, DJ Studio i Link Lobby. Pliki zostają lokalnie w przeglądarce.">
+  <meta property="og:url" content="https://spotiart.pl/">
+  <meta property="og:image" content="https://spotiart.pl/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SpotiArt Studio — prywatne przeglądarkowe studio muzyczne z equalizerem i konsoletą DJ.">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SpotiArt Studio — Twoja muzyka. Twoje brzmienie. Twoje studio.">
+  <meta name="twitter:description" content="Prywatne przeglądarkowe studio muzyczne: biblioteka, 13-pasmowy EQ, wizualizator, DJ Studio i Link Lobby. Dane zostają na Twoim urządzeniu.">
+  <meta name="twitter:image" content="https://spotiart.pl/assets/og-image.png">
+
+  <!-- Icons / PWA -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icon-180.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Preconnect for the app link -->
+  <link rel="dns-prefetch" href="https://spotiart.pl">
+
+  <!-- Structured data: Organization + Software + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://spotiart.pl/#organization",
+        "name": "SpotiArt Studio",
+        "url": "https://spotiart.pl/",
+        "logo": "https://spotiart.pl/assets/icon-512.png",
+        "description": "Prywatne, przeglądarkowe centrum muzyczne do słuchania, porządkowania i twórczego wykorzystywania własnej biblioteki dźwięków.",
+        "slogan": "Twoja muzyka. Twoje brzmienie. Twoje studio."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://spotiart.pl/#website",
+        "url": "https://spotiart.pl/",
+        "name": "SpotiArt Studio",
+        "inLanguage": "pl-PL",
+        "publisher": { "@id": "https://spotiart.pl/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://spotiart.pl/#app",
+        "name": "SpotiArt Studio",
+        "applicationCategory": "MultimediaApplication",
+        "applicationSubCategory": "Music Player",
+        "operatingSystem": "Web (dowolna nowoczesna przeglądarka)",
+        "url": "https://spotiart.pl/",
+        "inLanguage": "pl-PL",
+        "description": "Przeglądarkowe studio muzyczne z biblioteką utworów, 13-pasmowym equalizerem, wizualizatorem audio, DJ Studio i Link Lobby. Pliki, playlisty i ustawienia pozostają lokalnie w przeglądarce.",
+        "featureList": [
+          "Biblioteka i playlisty przechowywane lokalnie w przeglądarce",
+          "13-pasmowy equalizer z zapisywalnymi profilami EQ",
+          "Wizualizator audio reagujący na muzykę",
+          "DJ Studio z dwoma deckami, crossfaderem, pętlami i hot cue",
+          "Automix i obsługa kontrolerów MIDI",
+          "Link Lobby dla linków YouTube z kolekcjami",
+          "Opcjonalne konto do synchronizacji linków i profili EQ"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "PLN",
+          "availability": "https://schema.org/InStock"
+        },
+        "publisher": { "@id": "https://spotiart.pl/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://spotiart.pl/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Czy moje pliki muzyczne są wysyłane na serwer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie. Twoja muzyka, playlisty, historia odsłuchu i ustawienia DJ-skie pozostają lokalnie w Twojej przeglądarce. Pliki audio nie są przesyłane na zewnętrzny serwer, dzięki czemu masz pełną prywatność i kontrolę nad kolekcją."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy potrzebuję konta, aby korzystać ze SpotiArt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie. Konto jest w pełni opcjonalne. Możesz korzystać z aplikacji jako gość. Konto (e-mail i hasło lub Google) służy głównie do synchronizacji zapisanych linków YouTube, awatara i kopii profili equalizera między urządzeniami."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ile pasm ma equalizer w SpotiArt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SpotiArt oferuje 13-pasmowy equalizer. Ustawienia można zapisywać jako profile EQ, zmieniać ich nazwy, usuwać oraz eksportować i importować jako kopię zapasową, aby odtworzyć ulubione brzmienie na innym urządzeniu."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Co potrafi DJ Studio w SpotiArt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DJ Studio pozwala miksować muzykę na dwóch niezależnych deckach. Do dyspozycji są m.in. regulacja głośności kanałów, crossfader, odsłuch CUE, przycisk „Brake”, pętle 1/2/4/8 taktów, hot cue oraz funkcja roll. System Automix tworzy kolejkę i automatycznie przechodzi między utworami, a obsługa MIDI umożliwia podłączenie kompatybilnego kontrolera."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czym jest Link Lobby?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Link Lobby to miejsce na zapisywanie linków do filmów i nagrań z YouTube, układanie ich w kolekcje i odtwarzanie w aplikacji przez oficjalny odtwarzacz YouTube. Linki można edytować, przenosić metodą przeciągnij i upuść, eksportować do pliku JSON i importować ponownie."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ile kosztuje SpotiArt Studio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SpotiArt Studio działa w przeglądarce i nie wymaga instalacji. Wejdź na spotiart.pl, dodaj swoją muzykę, ustaw brzmienie i zacznij tworzyć własne studio dźwięku."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#05080a;
+      --bg-2:#0a0f12;
+      --panel:#0e1418;
+      --panel-2:#121a1f;
+      --line:rgba(46,214,110,.14);
+      --text:#e9f3ec;
+      --muted:#9db0a6;
+      --muted-2:#6d817a;
+      --green:#1ed760;
+      --green-bright:#39ff88;
+      --teal:#17e6c8;
+      --glow:0 0 40px rgba(30,215,96,.35);
+      --radius:18px;
+      --maxw:1160px;
+      --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;background:var(--bg);color:var(--text);
+      font-family:var(--font);font-size:17px;line-height:1.65;
+      -webkit-font-smoothing:antialiased;overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    h1,h2,h3{line-height:1.15;margin:0;letter-spacing:-.02em;font-weight:800}
+    p{margin:0 0 1rem}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+    .grad{background:linear-gradient(120deg,var(--green-bright),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1rem;
+      padding:14px 26px;border-radius:999px;transition:.2s transform,.2s box-shadow,.2s background;cursor:pointer;border:0;
+    }
+    .btn-primary{background:linear-gradient(120deg,var(--green),var(--green-bright));color:#04140a;box-shadow:var(--glow)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 60px rgba(30,215,96,.55)}
+    .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+    .btn-ghost:hover{border-color:var(--green);color:var(--green-bright)}
+
+    /* Background glows */
+    .bg-fx{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+    .bg-fx::before,.bg-fx::after{content:"";position:absolute;border-radius:50%;filter:blur(120px);opacity:.5}
+    .bg-fx::before{width:640px;height:640px;background:radial-gradient(circle,rgba(30,215,96,.4),transparent 60%);top:-180px;left:-120px}
+    .bg-fx::after{width:560px;height:560px;background:radial-gradient(circle,rgba(23,230,200,.28),transparent 60%);top:40%;right:-160px}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(5,8,10,.72);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
+    .brand .logo{width:34px;height:34px}
+    .nav-links{display:flex;gap:30px;align-items:center}
+    .nav-links a{color:var(--muted);font-size:.95rem;font-weight:600;transition:.2s color}
+    .nav-links a:hover{color:var(--green-bright)}
+    .nav-cta{padding:10px 20px;font-size:.92rem}
+    .menu-btn{display:none;background:none;border:0;color:var(--text);cursor:pointer;padding:8px}
+
+    /* Hero */
+    .hero{position:relative;padding:96px 0 80px;text-align:center}
+    .hero h1{font-size:clamp(2.4rem,6.2vw,4.4rem);margin-bottom:22px}
+    .hero .lead{font-size:clamp(1.05rem,2.4vw,1.35rem);color:var(--muted);max-width:720px;margin:0 auto 34px}
+    .hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .hero-note{margin-top:20px;font-size:.9rem;color:var(--muted-2)}
+    .pill-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:44px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;color:var(--muted);background:rgba(255,255,255,.02)}
+    .pill svg{color:var(--green)}
+
+    /* Section base */
+    section{padding:84px 0;position:relative}
+    .sec-head{max-width:680px;margin:0 auto 54px;text-align:center}
+    .sec-head h2{font-size:clamp(1.9rem,4.4vw,2.9rem);margin-bottom:16px}
+    .sec-head p{color:var(--muted);font-size:1.08rem;margin:0}
+
+    /* Feature grid */
+    .grid{display:grid;gap:22px;grid-template-columns:repeat(3,1fr)}
+    .card{
+      background:linear-gradient(180deg,var(--panel),var(--bg-2));
+      border:1px solid var(--line);border-radius:var(--radius);padding:30px;
+      transition:.25s transform,.25s border-color,.25s box-shadow;
+    }
+    .card:hover{transform:translateY(-4px);border-color:rgba(30,215,96,.4);box-shadow:0 20px 50px -20px rgba(30,215,96,.35)}
+    .card .ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:rgba(30,215,96,.1);border:1px solid var(--line);margin-bottom:20px;color:var(--green-bright)}
+    .card h3{font-size:1.28rem;margin-bottom:10px}
+    .card p{color:var(--muted);font-size:.98rem;margin:0}
+
+    /* Split feature rows */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin:0 auto;max-width:var(--maxw)}
+    .split + .split{margin-top:96px}
+    .split.rev .visual{order:2}
+    .split h3{font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:18px}
+    .split p{color:var(--muted)}
+    .split ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:12px}
+    .split li{display:flex;gap:12px;align-items:flex-start;color:var(--text);font-size:.98rem}
+    .split li svg{flex:0 0 auto;color:var(--green);margin-top:4px}
+    .visual{border:1px solid var(--line);border-radius:20px;padding:26px;background:linear-gradient(160deg,var(--panel-2),var(--bg));min-height:280px;position:relative;overflow:hidden}
+    .visual .glow{position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(30,215,96,.18),transparent 60%)}
+
+    /* EQ mock */
+    .eq{display:flex;gap:10px;align-items:flex-end;height:180px;position:relative;z-index:1}
+    .eq .bar{flex:1;background:linear-gradient(180deg,var(--green-bright),rgba(30,215,96,.15));border-radius:6px 6px 3px 3px;animation:eq 1.4s ease-in-out infinite}
+    @keyframes eq{0%,100%{height:30%}50%{height:90%}}
+    @media(prefers-reduced-motion:reduce){.eq .bar,.wave span{animation:none!important}}
+
+    /* Wave mock */
+    .wave{display:flex;gap:5px;align-items:center;height:180px;justify-content:center;position:relative;z-index:1}
+    .wave span{width:6px;background:linear-gradient(180deg,var(--teal),var(--green));border-radius:4px;animation:wv 1.1s ease-in-out infinite}
+    @keyframes wv{0%,100%{height:16%}50%{height:80%}}
+
+    /* DJ mock */
+    .decks{display:flex;gap:20px;position:relative;z-index:1;justify-content:center;align-items:center;height:180px}
+    .deck{width:120px;height:120px;border-radius:50%;border:2px solid var(--line);background:conic-gradient(from 0deg,rgba(30,215,96,.35),transparent 40%,rgba(30,215,96,.35));display:grid;place-items:center;animation:spin 4s linear infinite}
+    .deck::after{content:"";width:34px;height:34px;border-radius:50%;background:var(--panel);border:2px solid var(--green)}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .fader{width:120px;height:8px;border-radius:6px;background:var(--panel);align-self:center;position:relative}
+    .fader::after{content:"";position:absolute;top:-6px;left:44%;width:20px;height:20px;border-radius:5px;background:var(--green-bright);box-shadow:var(--glow)}
+
+    /* Privacy band */
+    .band{background:linear-gradient(120deg,rgba(30,215,96,.08),rgba(23,230,200,.06));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .band .inner{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .stat{border:1px solid var(--line);border-radius:16px;padding:22px;background:rgba(5,8,10,.5)}
+    .stat b{display:block;font-size:1.9rem;font-weight:800}
+    .stat span{color:var(--muted);font-size:.9rem}
+
+    /* Audience */
+    .aud{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .aud .card{padding:24px;text-align:center}
+    .aud .ico{margin:0 auto 16px}
+
+    /* FAQ */
+    .faq{max-width:820px;margin:0 auto;display:grid;gap:14px}
+    details{border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden}
+    details[open]{border-color:rgba(30,215,96,.4)}
+    summary{cursor:pointer;padding:22px 24px;font-weight:700;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+    summary::-webkit-details-marker{display:none}
+    summary .plus{color:var(--green);transition:.2s transform;flex:0 0 auto}
+    details[open] summary .plus{transform:rotate(45deg)}
+    details .body{padding:0 24px 22px;color:var(--muted)}
+
+    /* Final CTA */
+    .final{text-align:center}
+    .final .box{border:1px solid var(--line);border-radius:26px;padding:64px 32px;background:linear-gradient(160deg,var(--panel-2),var(--bg));position:relative;overflow:hidden}
+    .final .box .glow{position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(30,215,96,.22),transparent 65%)}
+    .final h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:18px;position:relative}
+    .final p{color:var(--muted);max-width:560px;margin:0 auto 30px;position:relative}
+
+    /* Footer */
+    footer{border-top:1px solid var(--line);padding:52px 0 40px;color:var(--muted)}
+    .foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+    .foot .brand{margin-bottom:14px}
+    .foot-links{display:flex;gap:48px;flex-wrap:wrap}
+    .foot-col h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted-2);margin:0 0 14px}
+    .foot-col a{display:block;color:var(--muted);font-size:.94rem;margin-bottom:9px;transition:.2s color}
+    .foot-col a:hover{color:var(--green-bright)}
+    .copy{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted-2);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+    /* Responsive */
+    @media(max-width:900px){
+      .grid,.aud{grid-template-columns:1fr 1fr}
+      .split{grid-template-columns:1fr;gap:32px}
+      .split.rev .visual{order:0}
+      .band .inner{grid-template-columns:1fr}
+      .nav-links{display:none}
+      .menu-btn{display:block}
+      .nav-links.open{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--bg-2);padding:20px 24px;border-bottom:1px solid var(--line);gap:18px}
+    }
+    @media(max-width:560px){
+      .grid,.aud,.stats{grid-template-columns:1fr}
+      section{padding:60px 0}
+      .hero{padding:64px 0 56px}
+    }
+    /* Skip link */
+    .skip{position:absolute;left:-9999px;top:0;background:var(--green);color:#04140a;padding:10px 16px;border-radius:8px;z-index:100}
+    .skip:focus{left:16px;top:16px}
+  </style>
+</head>
+<body>
+  <a href="#glowna" class="skip">Przejdź do treści</a>
+  <div class="bg-fx" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="wrap nav">
+      <a href="#glowna" class="brand" aria-label="SpotiArt Studio — strona główna">
+        <svg class="logo" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect width="40" height="40" rx="10" fill="#0a0f12" stroke="#1ed760" stroke-opacity=".4"/>
+          <path d="M8 22c3-8 5 8 8 0s3-12 6 0 4 6 6 0 3-4 6-2" stroke="#39ff88" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span>SpotiArt<span class="grad"> Studio</span></span>
+      </a>
+      <nav class="nav-links" id="menu" aria-label="Nawigacja główna">
+        <a href="#funkcje">Funkcje</a>
+        <a href="#equalizer">Equalizer</a>
+        <a href="#dj">DJ Studio</a>
+        <a href="#prywatnosc">Prywatność</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://spotiart.pl/" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Otwórz aplikację</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="glowna">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <span class="eyebrow">Prywatne przeglądarkowe studio muzyczne</span>
+        <h1 id="hero-title">Twoja muzyka.<br><span class="grad">Twoje brzmienie. Twoje studio.</span></h1>
+        <p class="lead">SpotiArt Studio to osobista przestrzeń muzyczna, która łączy bibliotekę utworów, zaawansowaną regulację brzmienia, wizualizacje i konsoletę DJ-ską — a Twoje pliki zostają lokalnie w przeglądarce.</p>
+        <div class="hero-cta">
+          <a href="https://spotiart.pl/" class="btn btn-primary" target="_blank" rel="noopener">
+            Otwórz SpotiArt
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#funkcje" class="btn btn-ghost">Zobacz funkcje</a>
+        </div>
+        <p class="hero-note">Bez instalacji · Bez przesyłania plików na serwer · Konto opcjonalne</p>
+
+        <div class="pill-row">
+          <span class="pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Biblioteka i playlisty</span>
+          <span class="pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> 13-pasmowy equalizer</span>
+          <span class="pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Wizualizator audio</span>
+          <span class="pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> DJ Studio</span>
+          <span class="pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Link Lobby</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="funkcje" aria-labelledby="funkcje-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Wszystko w jednym miejscu</span>
+          <h2 id="funkcje-title">To nie kolejny zwykły odtwarzacz</h2>
+          <p>SpotiArt łączy słuchanie, porządkowanie i twórcze wykorzystanie własnej biblioteki dźwięków — w jednej, dopracowanej przestrzeni w przeglądarce.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M9 18V5l12-2v13" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+            <h3>Biblioteka i playlisty</h3>
+            <p>Dodawaj własne pliki audio, twórz playlisty, zmieniaj ich nazwy, przypisuj okładki i zarządzaj kolejnością odtwarzania.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6" stroke-linecap="round"/></svg></div>
+            <h3>13-pasmowy equalizer</h3>
+            <p>Precyzyjnie dostosuj brzmienie do słuchawek, głośników i gatunku. Zapisuj, eksportuj i importuj profile EQ.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M2 12c2-6 3 6 5 0s3-9 5 0 3 6 5 0 2-4 5-2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Wizualizator audio</h3>
+            <p>Efekty reagujące na muzykę. Masz wpływ na styl, kolor i intensywność — od relaksu po domową imprezę.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/></svg></div>
+            <h3>DJ Studio</h3>
+            <p>Dwa niezależne decki, crossfader, CUE, „Brake”, pętle, hot cue i roll. Automix i obsługa kontrolerów MIDI.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Link Lobby</h3>
+            <p>Zapisuj linki YouTube, układaj je w kolekcje i odtwarzaj przez oficjalny odtwarzacz. Eksport i import w formacie JSON.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4" stroke-linecap="round"/></svg></div>
+            <h3>Prywatność i konto</h3>
+            <p>Pliki i playlisty zostają na urządzeniu. Opcjonalne konto synchronizuje linki, awatar i kopie profili EQ.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUALIZER SPLIT -->
+    <section id="equalizer" aria-labelledby="eq-title" style="padding-top:40px">
+      <div class="wrap">
+        <div class="split">
+          <div class="visual" aria-hidden="true">
+            <div class="glow"></div>
+            <div class="eq">
+              <span class="bar" style="animation-delay:0s"></span>
+              <span class="bar" style="animation-delay:.1s"></span>
+              <span class="bar" style="animation-delay:.2s"></span>
+              <span class="bar" style="animation-delay:.3s"></span>
+              <span class="bar" style="animation-delay:.4s"></span>
+              <span class="bar" style="animation-delay:.5s"></span>
+              <span class="bar" style="animation-delay:.6s"></span>
+              <span class="bar" style="animation-delay:.5s"></span>
+              <span class="bar" style="animation-delay:.4s"></span>
+              <span class="bar" style="animation-delay:.3s"></span>
+              <span class="bar" style="animation-delay:.2s"></span>
+              <span class="bar" style="animation-delay:.1s"></span>
+              <span class="bar" style="animation-delay:0s"></span>
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow">Precyzyjna kontrola brzmienia</span>
+            <h3 id="eq-title">13 pasm pod pełną kontrolą</h3>
+            <p>Jedna z kluczowych funkcji SpotiArt. Dopasuj brzmienie do swoich słuchawek, głośników, gatunku muzycznego i własnych preferencji — pasmo po paśmie.</p>
+            <ul>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Zapisuj ustawienia jako profile EQ i nadawaj im nazwy</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Eksportuj i importuj profile jako kopię zapasową</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Odtwórz ulubione brzmienie na innym urządzeniu</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- VISUALIZER SPLIT -->
+        <div class="split rev">
+          <div class="visual" aria-hidden="true">
+            <div class="glow"></div>
+            <div class="wave">
+              <span style="animation-delay:0s"></span><span style="animation-delay:.08s"></span><span style="animation-delay:.16s"></span>
+              <span style="animation-delay:.24s"></span><span style="animation-delay:.32s"></span><span style="animation-delay:.4s"></span>
+              <span style="animation-delay:.48s"></span><span style="animation-delay:.56s"></span><span style="animation-delay:.64s"></span>
+              <span style="animation-delay:.56s"></span><span style="animation-delay:.48s"></span><span style="animation-delay:.4s"></span>
+              <span style="animation-delay:.32s"></span><span style="animation-delay:.24s"></span><span style="animation-delay:.16s"></span>
+              <span style="animation-delay:.08s"></span><span style="animation-delay:0s"></span>
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow">Odsłuch, który widać</span>
+            <h3>Wizualizator reagujący na muzykę</h3>
+            <p>Zamień słuchanie w osobiste, efektowne doświadczenie. Wizualizator odpowiada na to, co gra, a Ty decydujesz o jego charakterze.</p>
+            <ul>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Wybierz styl, kolor i intensywność efektu</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Idealny do relaksu i do domowej imprezy</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Odsłuch staje się bardziej Twój</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- DJ SPLIT -->
+        <div class="split" id="dj">
+          <div class="visual" aria-hidden="true">
+            <div class="glow"></div>
+            <div class="decks">
+              <div class="deck"></div>
+              <div class="deck" style="animation-duration:5s"></div>
+            </div>
+            <div class="fader" style="margin:20px auto 0"></div>
+          </div>
+          <div>
+            <span class="eyebrow">Dla tych, którzy chcą pójść dalej</span>
+            <h3>DJ Studio — kreatywne miksowanie</h3>
+            <p>Moduł do miksowania muzyki na dwóch niezależnych deckach. Wszystko, czego potrzebujesz, aby zbudować własny set.</p>
+            <ul>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Głośność kanałów, crossfader, odsłuch CUE i „Brake”</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Pętle 1/2/4/8 taktów, hot cue oraz funkcja roll</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Automix i obsługa kontrolerów MIDI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY BAND -->
+    <section id="prywatnosc" class="band" aria-labelledby="priv-title">
+      <div class="wrap inner">
+        <div>
+          <span class="eyebrow">Private. Local. Yours.</span>
+          <h2 id="priv-title" style="font-size:clamp(1.9rem,4.4vw,2.9rem);margin-bottom:16px">Prywatność wpisana w projekt</h2>
+          <p style="color:var(--muted)">Pliki, playlisty, historia odsłuchu i ustawienia DJ-skie pozostają lokalnie w Twojej przeglądarce. To oznacza większą prywatność i pełną kontrolę nad własną kolekcją muzyczną. Własna muzyka nie jest przesyłana na serwer — nawet gdy założysz konto.</p>
+          <a href="#faq" class="btn btn-ghost" style="margin-top:6px">Najczęstsze pytania</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b class="grad">Lokalnie</b><span>Muzyka i playlisty na Twoim urządzeniu</span></div>
+          <div class="stat"><b class="grad">0</b><span>plików wysyłanych na serwer</span></div>
+          <div class="stat"><b class="grad">Opcja</b><span>Konto tylko do synchronizacji linków i EQ</span></div>
+          <div class="stat"><b class="grad">100%</b><span>kontroli nad własną kolekcją</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUDIENCE -->
+    <section aria-labelledby="aud-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Dla kogo</span>
+          <h2 id="aud-title">Nie tylko „kliknij play”</h2>
+          <p>SpotiArt to platforma dla tych, którzy chcą stworzyć własny, dopracowany świat dźwięku.</p>
+        </div>
+        <div class="aud">
+          <article class="card">
+            <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 18v-6a9 9 0 0 1 18 0v6" stroke-linecap="round"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3 style="font-size:1.1rem">Słuchacze</h3>
+            <p>Ceniący jakość brzmienia i porządek w bibliotece.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 4h16v12H4z" stroke-linejoin="round"/><path d="M2 20h20M8 8h8M8 12h5" stroke-linecap="round"/></svg></div>
+            <h3 style="font-size:1.1rem">Kolekcjonerzy</h3>
+            <p>Budujący i porządkujący własne kolekcje muzyczne.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/></svg></div>
+            <h3 style="font-size:1.1rem">Domowi DJ-e</h3>
+            <p>Miksujący sety na dwóch deckach z Automixem i MIDI.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3v18M5 8l7-5 7 5M5 8v8l7 5 7-5V8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3 style="font-size:1.1rem">Twórcy</h3>
+            <p>Chcący stworzyć własny, dopracowany świat dźwięku.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">FAQ</span>
+          <h2 id="faq-title">Najczęściej zadawane pytania</h2>
+          <p>Wszystko, co warto wiedzieć o prywatności, koncie i funkcjach SpotiArt.</p>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>Czy moje pliki muzyczne są wysyłane na serwer?<span class="plus"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></summary>
+            <div class="body">Nie. Twoja muzyka, playlisty, historia odsłuchu i ustawienia DJ-skie pozostają lokalnie w przeglądarce. Pliki audio nie są przesyłane na zewnętrzny serwer — masz pełną prywatność i kontrolę nad kolekcją.</div>
+          </details>
+          <details>
+            <summary>Czy potrzebuję konta, aby korzystać ze SpotiArt?<span class="plus"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></summary>
+            <div class="body">Nie. Konto jest w pełni opcjonalne — możesz korzystać z aplikacji jako gość. Konto (e-mail i hasło lub Google) służy głównie do synchronizacji zapisanych linków YouTube, awatara i kopii profili equalizera między urządzeniami.</div>
+          </details>
+          <details>
+            <summary>Ile pasm ma equalizer?<span class="plus"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></summary>
+            <div class="body">SpotiArt oferuje 13-pasmowy equalizer. Ustawienia zapiszesz jako profile EQ, zmienisz ich nazwy, usuniesz oraz wyeksportujesz i zaimportujesz jako kopię zapasową, aby odtworzyć ulubione brzmienie na innym urządzeniu.</div>
+          </details>
+          <details>
+            <summary>Co potrafi DJ Studio?<span class="plus"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></summary>
+            <div class="body">DJ Studio pozwala miksować muzykę na dwóch niezależnych deckach. Masz do dyspozycji regulację głośności kanałów, crossfader, odsłuch CUE, przycisk „Brake”, pętle 1/2/4/8 taktów, hot cue i roll. Automix tworzy kolejkę i automatycznie przechodzi między utworami, a obsługa MIDI umożliwia podłączenie kontrolera.</div>
+          </details>
+          <details>
+            <summary>Czym jest Link Lobby?<span class="plus"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></summary>
+            <div class="body">Link Lobby to miejsce na zapisywanie linków do filmów i nagrań z YouTube, układanie ich w kolekcje i odtwarzanie w aplikacji przez oficjalny odtwarzacz YouTube. Linki edytujesz, przenosisz metodą przeciągnij i upuść, eksportujesz do pliku JSON i importujesz ponownie.</div>
+          </details>
+          <details>
+            <summary>Na jakich urządzeniach działa SpotiArt?<span class="plus"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></summary>
+            <div class="body">SpotiArt Studio działa w każdej nowoczesnej przeglądarce — bez instalacji. Wejdź na spotiart.pl, dodaj swoją muzykę, ustaw brzmienie, zbuduj playlisty i miksuj dokładnie tak, jak lubisz.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="box">
+          <div class="glow" aria-hidden="true"></div>
+          <h2 id="cta-title">Wejdź, dodaj muzykę, <span class="grad">stwórz swoje studio</span></h2>
+          <p>Ustaw brzmienie, zbuduj playlisty i miksuj dokładnie tak, jak lubisz. SpotiArt.pl — Twoja muzyka. Twoje brzmienie. Twoje studio.</p>
+          <a href="https://spotiart.pl/" class="btn btn-primary" target="_blank" rel="noopener" style="position:relative">
+            Otwórz SpotiArt Studio
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <a href="#glowna" class="brand" aria-label="SpotiArt Studio">
+            <svg class="logo" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect width="40" height="40" rx="10" fill="#0a0f12" stroke="#1ed760" stroke-opacity=".4"/>
+              <path d="M8 22c3-8 5 8 8 0s3-12 6 0 4 6 6 0 3-4 6-2" stroke="#39ff88" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+            </svg>
+            <span>SpotiArt<span class="grad"> Studio</span></span>
+          </a>
+          <p style="max-width:320px;color:var(--muted);font-size:.94rem">Prywatne, przeglądarkowe centrum muzyczne dla słuchaczy, kolekcjonerów i domowych DJ-ów.</p>
+        </div>
+        <div class="foot-links">
+          <div class="foot-col">
+            <h4>Funkcje</h4>
+            <a href="#funkcje">Biblioteka</a>
+            <a href="#equalizer">Equalizer</a>
+            <a href="#dj">DJ Studio</a>
+            <a href="#prywatnosc">Prywatność</a>
+          </div>
+          <div class="foot-col">
+            <h4>Zasoby</h4>
+            <a href="#faq">FAQ</a>
+            <a href="https://spotiart.pl/" target="_blank" rel="noopener">Aplikacja</a>
+            <a href="https://spotiart.pl/links" target="_blank" rel="noopener">Link Lobby</a>
+          </div>
+          <div class="foot-col">
+            <h4>Start</h4>
+            <a href="https://spotiart.pl/" target="_blank" rel="noopener">Otwórz studio</a>
+            <a href="https://spotiart.pl/auth" target="_blank" rel="noopener">Załóż konto</a>
+          </div>
+        </div>
+      </div>
+      <div class="copy">
+        <span>© <span id="year">2026</span> SpotiArt Studio · spotiart.pl</span>
+        <span>Twoja muzyka. Twoje brzmienie. Twoje studio.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    (function(){
+      var btn=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+      if(btn&&menu){
+        btn.addEventListener('click',function(){
+          var open=menu.classList.toggle('open');
+          btn.setAttribute('aria-expanded',open);
+        });
+        menu.querySelectorAll('a').forEach(function(a){
+          a.addEventListener('click',function(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+        });
+      }
+      var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

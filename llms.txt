@@ -1,0 +1,35 @@
+# SpotiArt Studio
+
+> SpotiArt Studio (spotiart.pl) to prywatne, przeglądarkowe centrum muzyczne do słuchania, porządkowania i twórczego wykorzystywania własnej biblioteki dźwięków — bez przesyłania plików na zewnętrzny serwer. Łączy bibliotekę utworów, 13-pasmowy equalizer, wizualizator audio, konsoletę DJ-ską (DJ Studio) oraz Link Lobby dla linków YouTube. Pliki, playlisty, historia odsłuchu i ustawienia pozostają lokalnie w przeglądarce użytkownika.
+
+Hasło marki: „Twoja muzyka. Twoje brzmienie. Twoje studio.” (Private. Local. Yours.)
+
+## Kluczowe fakty
+
+- Rodzaj: aplikacja webowa (działa w przeglądarce, bez instalacji).
+- Prywatność: własna muzyka i playlisty NIE są przesyłane na serwer; pozostają lokalnie na urządzeniu użytkownika.
+- Konto: opcjonalne (e-mail i hasło albo Google). Służy głównie do synchronizacji zapisanych linków YouTube, awatara i kopii profili equalizera między urządzeniami. W trybie gościa dane są przechowywane w bieżącej przeglądarce.
+- Odbiorcy: słuchacze, kolekcjonerzy muzyki, domowi DJ-e oraz twórcy własnych przestrzeni dźwiękowych.
+
+## Funkcje
+
+- Biblioteka i playlisty: dodawanie własnych plików audio, tworzenie playlist, zmiana nazw, przypisywanie okładek, dodawanie/usuwanie utworów i zarządzanie kolejnością odtwarzania.
+- 13-pasmowy equalizer: precyzyjna regulacja brzmienia; zapisywanie ustawień jako profili EQ, zmiana nazw, usuwanie oraz eksport i import (kopia zapasowa) w celu odtworzenia brzmienia na innym urządzeniu.
+- Wizualizator audio: efekty reagujące na muzykę z kontrolą stylu, koloru i intensywności.
+- DJ Studio: miksowanie na dwóch niezależnych deckach; regulacja głośności kanałów, crossfader, odsłuch CUE, przycisk „Brake” (symulacja zatrzymania winylu), pętle 1/2/4/8 taktów, hot cue oraz funkcja roll. Automix tworzy kolejkę i automatycznie przechodzi między utworami. Obsługa MIDI umożliwia podłączenie kompatybilnego kontrolera i przypisanie przycisków oraz pokręteł do funkcji.
+- Link Lobby: zapisywanie linków do filmów i nagrań z YouTube, układanie ich w kolekcje i odtwarzanie przez oficjalny odtwarzacz YouTube; edycja linków, przenoszenie metodą „przeciągnij i upuść”, eksport do pliku JSON i ponowny import.
+
+## Strony
+
+- [Strona główna](https://spotiart.pl/): aplikacja i wszystkie funkcje.
+- [Equalizer](https://spotiart.pl/equalizer): 13-pasmowy korektor brzmienia.
+- [Link Lobby](https://spotiart.pl/links): kolekcje linków YouTube.
+- [DJ Studio](https://spotiart.pl/dj): miksowanie na dwóch deckach.
+- [Logowanie / rejestracja](https://spotiart.pl/auth): opcjonalne konto.
+
+## FAQ
+
+- Czy pliki są wysyłane na serwer? Nie — muzyka, playlisty, historia i ustawienia pozostają lokalnie w przeglądarce.
+- Czy potrzebne jest konto? Nie — konto jest opcjonalne i służy do synchronizacji linków, awatara oraz kopii profili EQ.
+- Ile pasm ma equalizer? Trzynaście (13), z zapisywalnymi, eksportowalnymi profilami.
+- Ile kosztuje? Aplikacja działa w przeglądarce bez instalacji; wystarczy wejść na spotiart.pl.
